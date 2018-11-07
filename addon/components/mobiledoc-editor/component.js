@@ -291,11 +291,13 @@ export default Component.extend({
     editor.destroy();
   },
 
+  'on-change': () => {},
+
   postDidChange(editor) {
     let serializeVersion = this.get('serializeVersion');
     let updatedMobileDoc = editor.serialize(serializeVersion);
     this._localMobiledoc = updatedMobileDoc;
-    this.sendAction('on-change', updatedMobileDoc); // eslint-disable-line ember/closure-actions
+    this['on-change'](updatedMobileDoc);
   },
 
   inputModeDidChange(editor) {
@@ -326,12 +328,16 @@ export default Component.extend({
 
   },
 
+  'will-create-editor': () => {},
+
   willCreateEditor() {
-    this.sendAction(WILL_CREATE_EDITOR_ACTION); // eslint-disable-line ember/closure-actions
+    this['will-create-editor']();
   },
 
+  'did-create-editor': () => {},
+
   didCreateEditor(editor) {
-    this.sendAction(DID_CREATE_EDITOR_ACTION, editor); // eslint-disable-line ember/closure-actions
+    this['did-create-editor'](editor);
   },
 
   _addAtom(atomName, text, payload) {
