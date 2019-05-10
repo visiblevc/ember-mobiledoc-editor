@@ -4586,9 +4586,9 @@ mobiledoc-dom-renderer@0.6.5, mobiledoc-dom-renderer@^0.6.5:
   version "0.6.5"
   resolved "https://registry.yarnpkg.com/mobiledoc-dom-renderer/-/mobiledoc-dom-renderer-0.6.5.tgz#56c0302c4f9c30840ab5b9b20dfe905aed1e437b"
 
-mobiledoc-kit@^0.11.2:
+mobiledoc-kit@whatthewhat/mobiledoc-kit#dist:
   version "0.11.2"
-  resolved "https://registry.yarnpkg.com/mobiledoc-kit/-/mobiledoc-kit-0.11.2.tgz#969a8eb795ba1ae39ebc1c47f1dce53b053b210a"
+  resolved "https://codeload.github.com/whatthewhat/mobiledoc-kit/tar.gz/b1d3dc77d807e71dfadaa1e3254d379f56181938"
   dependencies:
     mobiledoc-dom-renderer "0.6.5"
     mobiledoc-text-renderer "0.3.2"
